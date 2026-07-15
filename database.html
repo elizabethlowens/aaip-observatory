@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Search the AAIP Observatory research database."
+  >
+
+  <title>Literature Database | AAIP Observatory</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-content">
+      <a class="site-title" href="index.html">
+        AAIP Observatory
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="database.html">Literature Database</a>
+        <a href="methodology.html">Methodology</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-heading">
+      <p class="eyebrow">Literature Database</p>
+
+      <h1>Explore the literature</h1>
+
+      <p>
+        Search and filter scholarship concerning aerospace autonomy,
+        intellectual property, and innovation governance.
+      </p>
+    </section>
+
+    <section class="database-controls" aria-label="Database filters">
+      <div class="full-width-control">
+        <label for="search-input">
+          Search all fields
+        </label>
+
+        <input
+          id="search-input"
+          type="search"
+          placeholder="Search titles, authors, summaries, keywords, or publications"
+        >
+      </div>
+
+      <div>
+        <label for="source-type-filter">
+          Source type
+        </label>
+
+        <select id="source-type-filter">
+          <option value="">All source types</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="domain-filter">
+          Aerospace domain
+        </label>
+
+        <select id="domain-filter">
+          <option value="">All aerospace domains</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="autonomy-filter">
+          Autonomy type
+        </label>
+
+        <select id="autonomy-filter">
+          <option value="">All autonomy types</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="ip-filter">
+          IP issue
+        </label>
+
+        <select id="ip-filter">
+          <option value="">All IP issues</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="jurisdiction-filter">
+          Jurisdiction
+        </label>
+
+        <select id="jurisdiction-filter">
+          <option value="">All jurisdictions</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="year-filter">
+          Publication year
+        </label>
+
+        <select id="year-filter">
+          <option value="">All years</option>
+        </select>
+      </div>
+
+      <div class="control-button-wrapper">
+        <button id="clear-filters" type="button">
+          Clear filters
+        </button>
+      </div>
+    </section>
+
+    <section class="database-status">
+      <p id="result-count" aria-live="polite">
+        Loading sources...
+      </p>
+    </section>
+
+    <section
+      id="database-results"
+      class="database-results"
+      aria-label="Research database results"
+    >
+      <p>Loading database...</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Database entries contain original summaries and classifications.
+      Consult the original sources before relying on any interpretation.
+    </p>
+  </footer>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/papaparse@5.5.3/papaparse.min.js"
+  ></script>
+
+  <script src="database.js"></script>
+</body>
+</html>
